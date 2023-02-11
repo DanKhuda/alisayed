@@ -1,0 +1,78 @@
+.work {
+  display: flex;
+
+  @include respond-below(md) {
+    flex-direction: column;
+  }
+
+  &__stages {
+    width: 44.9%;
+    background-image: url("../assets/stages.png");
+    @include background;
+
+    &:first-child {
+      padding-top: rem(70);
+    }
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__stage {
+    margin: 0 rem(108) rem(65) rem(59);
+    color: $white;
+  }
+
+  &__stage-title {
+    padding-bottom: rem(37);
+  }
+
+  &__rules {
+    width: 55.1%;
+
+    @include respond-below(md) {
+      display: flex;
+      width: 100%;
+    }
+
+    @include respond-below(sm) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__rule {
+    padding: rem(70) 0 rem(70) rem(54);
+  }
+
+  &__rule-title {
+    padding-bottom: rem(37);
+  }
+
+  &__rule-starting {
+    background-image: url("../assets/best-starting.png");
+    @include background;
+    height: 50%;
+
+    @include respond-below(md) {
+      height: auto;
+    }
+  }
+
+  &__rule-text {
+    padding: 0 rem(147) rem(54) 0;
+  }
+
+  &__rule-dummy {
+    background-image: url("../assets/verified-dummy.png");
+    @include background;
+    color: $white;
+    height: 50%;
+  }
+
+  &__rule-button {
+    color: $white;
+    border: 2px solid $white;
+  }
+}

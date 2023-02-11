@@ -1,0 +1,55 @@
+.double-section {
+  display: flex;
+
+  &__bg-image {
+    width: 66.4%;
+    background-image: url("../assets/main-image.png");
+    @include background;
+
+    @include respond-below(md) {
+      display: none;
+    }
+  }
+
+  &__bg-color {
+    width: 33.6%;
+    background: #f3f3f3;
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: rem(56) 0 rem(129) rem(56);
+  }
+
+  &__button {
+    background: none;
+    border: none;
+  }
+
+  &__title {
+    font-size: rem(40);
+    line-height: rem(57);
+    padding: rem(74) 0 rem(60) 0;
+    font-weight: 400;
+  }
+
+  &__title-bold {
+    display: block;
+    font-weight: 600;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: rem(28);
+    color: $grey;
+    padding-right: rem(50);
+  }
+}

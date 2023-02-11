@@ -1,0 +1,77 @@
+.footer {
+  display: flex;
+  color: $white;
+
+  @include respond-below(md) {
+    flex-direction: column-reverse;
+  }
+
+  &__info {
+    background-image: url("../assets/designed-by.png");
+    @include background;
+    width: 33.5%;
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__info-content {
+    display: flex;
+    flex-direction: column;
+    padding: rem(74) 0 rem(72) rem(48);
+    justify-content: space-between;
+    height: 100%;
+
+    @include respond-below(md) {
+      padding: rem(20) 0 rem(20) rem(48);
+    }
+  }
+
+  &__author {
+    font-size: rem(42);
+    line-height: rem(66);
+    padding: rem(33) 0 rem(10) 0;
+    font-weight: 600;
+  }
+
+  &__contact {
+    background-image: url("../assets/contact.png");
+    @include background;
+    width: 66.5%;
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__contact-content {
+    padding: rem(75) 0 rem(72) rem(58);
+  }
+
+  &__text {
+    font-size: rem(17);
+    line-height: rem(32);
+  }
+
+  &__title {
+    @include respond-below(md) {
+      padding-bottom: rem(30);
+    }
+  }
+
+  &__form {
+    padding: rem(49) 0 rem(95) 0;
+  }
+
+  &__socials {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__social-item {
+    padding: rem(22) rem(5) rem(48) 0;
+  }
+}

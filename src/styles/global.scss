@@ -1,0 +1,70 @@
+@mixin background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@mixin input {
+  border-radius: rem(10);
+  border: 1px solid $white;
+  font-size: rem(17);
+  background: none;
+  color: $white;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.title {
+  font-size: rem(45);
+  line-height: rem(60);
+  font-weight: 400;
+}
+
+.text {
+  font-size: rem(16);
+  line-height: rem(28);
+}
+
+.button {
+  padding: rem(17) rem(40);
+  font-size: rem(17);
+  background: none;
+  border-radius: 10px;
+  border: 2px solid $black;
+  transition: 0.3s;
+
+  &:hover {
+    border: 2px solid $hover;
+    color: $hover;
+  }
+}
+
+.form {
+  &__input {
+    width: rem(301);
+    @include input;
+    padding: rem(12) 0 rem(12) rem(28);
+    margin: 0 rem(12) rem(14) 0;
+    @include respond-below(lg) {
+      width: 40%;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    @include input;
+    padding: rem(12) rem(28);
+    width: rem(618);
+    height: rem(160);
+
+    @include respond-below(lg) {
+      width: 82.8%;
+    }
+  }
+}
